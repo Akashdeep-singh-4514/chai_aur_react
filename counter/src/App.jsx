@@ -5,13 +5,17 @@ function App() {
 
   const addcount = () => {
     console.log("clicked ", count);
-    count = count + 1;
-    setCount(count);
+    if (count <= 19) {
+      count = count + 1;
+      setCount(count);
+    }
   };
   const removecount = () => {
     console.log("clicked ", count);
-    count = count - 1;
-    setCount(count);
+    if (count >= 1) {
+      count = count - 1;
+      setCount(count);
+    }
   };
   return (
     <>
