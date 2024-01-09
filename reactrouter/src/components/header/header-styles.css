@@ -1,0 +1,9 @@
+.hovertext:hover{
+    color: red;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+.hovertext{
+    color: black;
+}
