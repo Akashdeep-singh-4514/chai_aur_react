@@ -3,10 +3,7 @@ import React from "react";
 const HomePage = () => {
   return (
     <>
-      <div
-        style={{ height: 350, marginLeft: 50, marginTop: 30 }}
-        className="row container "
-      >
+      <div style={{ marginLeft: 50, marginTop: 30 }} className="row container ">
         <div className="col-6 ">
           <img
             src="https://i.ibb.co/5BCcDYB/Remote2.png"
