@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { TodoProvider } from "./contexts/todocontext";
 import TodoForm from "./components/TodoForm";
+import TodoItems from "./components/TodoItems";
 function App() {
   const [todos, setTodos] = useState([]);
 
@@ -46,7 +47,21 @@ function App() {
     <TodoProvider
       value={{ addTodo, deleteTodo, toggleComplete, todos, updateTodo }}
     >
-      <TodoForm />
+      <div className="" style={{ width: "500px" }}>
+        <TodoForm />
+        <div className="flex flex-wrap ">
+          {/*Loop and Add TodoItem here */}
+          {todos.map((todo) => (
+            <div key={todo.id} className="w-full">
+              <TodoItems
+                id={todo.id}
+                task={todo.task}
+                completed={todo.completed}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
     </TodoProvider>
   );
 }
